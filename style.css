@@ -1,10 +1,36 @@
 @font-face { font-family: Dimitri; src: url('DIMITRI.TTF'); }
-
+html{
+  position:relative;
+  height: 100%;
+}
 body {
   font-size: 18px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+/* -------------------------------------------------------------- header */
 h1 {
   font-family: Dimitri;
   color: #6441a4;
   font-size: 5em;
+}
+/* -------------------------------------------------------------- main */
+.spacer {
+  border:1px solid black;
+  height: 500px;
+}
+.spacer img {
+  width: 150px;
+  height: 200px;
+  border: 1px solid black;
+}
+/* -------------------------------------------------------------- footer */
+.main_div {
+  flex: 1;
+}
+footer {
+  padding-top: 15px;
+  height: 100px;
+  text-align: center;
 }
