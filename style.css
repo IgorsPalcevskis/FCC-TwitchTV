@@ -9,6 +9,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+* {
+  border: 1px solid black;
+}
 /* -------------------------------------------------------------- header */
 h1 {
   font-family: Dimitri;
@@ -16,14 +19,21 @@ h1 {
   font-size: 5em;
 }
 /* -------------------------------------------------------------- main */
-.spacer {
-  border:1px solid black;
-  height: 500px;
+.row {
+  width: 100%;
+  margin: auto;
 }
-.spacer img {
-  width: 150px;
-  height: 200px;
+.channel_frame {
+  border:4px solid red;
+  height: 400px;
+  padding: 15px;
+}
+.logo_img {
+  width: 96px;
+  height: 96px;
   border: 1px solid black;
+  position: relative;
+  top: 30px;
 }
 /* -------------------------------------------------------------- footer */
 .main_div {
