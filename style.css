@@ -35,10 +35,10 @@ h1 {
   position: relative;
 }
 .channel_banner {
-  border: 1px solid purple;
   position: absolute;
   height: 170px;
   width: 100%;
+  background-image: url(https://web-cdn.ttvnw.net/images/xarth/bg_glitch_pattern.png);
 }
 .padding_div>h2 {
   position: relative;
