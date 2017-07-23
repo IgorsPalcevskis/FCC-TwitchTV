@@ -11,7 +11,8 @@ $(document).ready(function(){
         $('#channel1_name').text(channel_name);
         $('#channel1_status').text(channel_status);
         $('#channel1_banner').css({'background-image':'url(' + channel_banner + ')', 'background-size':'cover'});
-      }else {
+        $('#channel1_on_off').text('Online').css('color','green');
+      }else{
         $.ajax({
           url: 'https://api.twitch.tv/kraken/channels/levelcap/?client_id=25uubqo7b284h9adfikgpgxn4xzub6',
           success: function (response) {
@@ -24,6 +25,7 @@ $(document).ready(function(){
             $('#channel1_name').text(channel_name);
             $('#channel1_status').text(channel_status);
             $('#channel1_banner').css({'background-image':'url(' + channel_banner + ')', 'background-size':'cover'});
+            $('#channel1_on_off').text('Offline').css('color','red');
           },
         });
       }

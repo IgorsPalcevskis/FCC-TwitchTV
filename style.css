@@ -40,6 +40,7 @@ h1 {
   width: 100%;
   z-index: -1;
   background-image: url(https://web-cdn.ttvnw.net/images/xarth/bg_glitch_pattern.png);
+  border-bottom: 1px solid black;
 }
 .padding_div>h2 {
   position: relative;
