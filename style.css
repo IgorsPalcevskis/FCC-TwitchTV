@@ -38,6 +38,7 @@ h1 {
   position: absolute;
   height: 170px;
   width: 100%;
+  z-index: -1;
   background-image: url(https://web-cdn.ttvnw.net/images/xarth/bg_glitch_pattern.png);
 }
 .padding_div>h2 {
@@ -49,6 +50,7 @@ h1 {
 .padding_div>p:nth-child(2) {
   text-align: right;
   padding: 15px;
+  z-index: 1;
 }
 .padding_div>p:nth-child(5) {
   position: relative;
