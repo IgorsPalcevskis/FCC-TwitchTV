@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.ajax({
-    url:'https://api.twitch.tv/kraken/streams/levelcap/?client_id=25uubqo7b284h9adfikgpgxn4xzub6',
+    url:'https://api.twitch.tv/kraken/streams/the_lazy_peon/?client_id=25uubqo7b284h9adfikgpgxn4xzub6',
     success: function(response) {
       if (response.stream) {
         var logo = response.stream.channel.logo;
@@ -14,7 +14,7 @@ $(document).ready(function(){
         $('#channel1_on_off').text('Online').css('color','green');
       }else{
         $.ajax({
-          url: 'https://api.twitch.tv/kraken/channels/levelcap/?client_id=25uubqo7b284h9adfikgpgxn4xzub6',
+          url: 'https://api.twitch.tv/kraken/channels/the_lazy_peon/?client_id=25uubqo7b284h9adfikgpgxn4xzub6',
           success: function (response) {
             console.log(response);
             var logo = response.logo;
