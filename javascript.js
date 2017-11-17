@@ -1,7 +1,12 @@
 $(document).ready(function(){
-var channelsArray = ['cohhcarnage','the_lazy_peon','mfpallytime','neebsgaming','koyo','strippin','zethiann','forcegaming'];
+var channelsArray = ['cohhcarnage','the_lazy_peon','mfpallytime','neebsgaming','koyo','zethiann','forcegaming'];
+
+for (var i = 0; i < channelsArray.length; i++) {  /* loop begins */
+
+(function (i) {
+  console.log(channelsArray[i]);
   $.ajax({
-    url:'https://api.twitch.tv/kraken/streams/'+ channelsArray[0] +'/?client_id=25uubqo7b284h9adfikgpgxn4xzub6',
+    url:'https://api.twitch.tv/kraken/streams/'+ channelsArray[i] +'/?client_id=25uubqo7b284h9adfikgpgxn4xzub6',
     success: function(response) {
       if (response.stream) {
         var logo = response.stream.channel.logo;
@@ -18,7 +23,7 @@ var channelsArray = ['cohhcarnage','the_lazy_peon','mfpallytime','neebsgaming','
         $('#channel_on_off').text('Online').css('color','green');
       } else{
         $.ajax({
-          url: 'https://api.twitch.tv/kraken/channels/'+ channelsArray[0] +'/?client_id=25uubqo7b284h9adfikgpgxn4xzub6',
+          url: 'https://api.twitch.tv/kraken/channels/'+ channelsArray[i] +'/?client_id=25uubqo7b284h9adfikgpgxn4xzub6',
           success: function (response) {
             console.log(response);
             var logo = response.logo;
@@ -35,4 +40,8 @@ var channelsArray = ['cohhcarnage','the_lazy_peon','mfpallytime','neebsgaming','
       }
     },
   });
+
+})(i);
+} /* loop ends */
+
 });
